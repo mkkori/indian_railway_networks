@@ -1,0 +1,76 @@
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script  src = "./d3.js"></script>
+	<script src="./topojson.js"></script>
+</head>
+<body>
+	<div>
+		<div class="Search">
+			<label>Search your station</label>
+			<div class="line"></div>
+			<div class="search-input-wrapper">
+				<input type="text" value="" id = "searchtext">	
+				<div class="search-button">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6c757d" 
+						stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<circle cx="11" cy="11" r="8"></circle>
+						<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+					</svg>
+				</div>
+			</div>
+			<div id="searchcomment">
+					<p id="info">Click on the circles to learn more<br>Green dots represents reachable stations<br>Some buttons are clickable</p>
+			</div>
+			<div id="searchresults">
+			</div>
+		</div>
+
+
+		<div id="wrapper">
+			<div class = "inner">
+				<div id="map">
+				</div>
+			</div>
+			<div class = "inner">
+				<div id="metrics">
+					<p id="stationname">Select Station</p>
+					<p class="cont">Stations Reachable: <span id="statreach">0</span></p>
+					<p class="cont">Stations From Which It can be reached: <span id="statreach2">0</span></p>
+					<p class="cont">Large Stations Reachable: <span id="statreach3">0</span></p>
+					<p class="cont">Large Stations From Which It can be reached: <span id="statreach4">0</span></p>
+					<p class="cont">Trains Originating From Station: <span id="statreach5">0</span></p>	
+				</div>
+				<div id="metrics">
+					<p id="stationname">India</p>
+					<p class="cont">Total Stations: <span id="allstation" class = "spanstat">4342</span></p>
+					<p class="cont">Large Stations(>50 trains per week): <span  id="large" class = "spanstat">343</span></p>
+					<p class="cont">Larger Stations(>100 trains per week): <span id="larger" class = "spanstat">121</span></p>			
+					<p class="cont">Massive Stations(>200 trains per week): <span id="massive" class = "spanstat">20</span></p>			
+
+					<p class="cont">Total Trains: <span class="spandis">2813</span></p>
+					<p class="cont">Longest Train - DistanceWise: <span class= "spanname" id="longesttrain">Dibrugarh To Kanyakumari (Vivek Express)</span></p>
+					<p class="cont">SouthMost Station: <span class= "spanname" id="kanya">Kanyakumari</span></p>			
+					<p class="cont">NothMost Station: <span class= "spanname" id="srin">Srinagar</span></p>			
+					<p class="cont">EastMost Station: <span class= "spanname" id="ledos">Ledo</span></p>			
+					<p class="cont">WestMost Station: <span class= "spanname" id="varv">Varvala</span></p>			
+					<p class="cont">Largest Station(in terms of trains passing):</p>	
+					<p class="cont"><span class= "spanname" id="vijay">Vijaywada</span><span class= "spanname" id="vado">Vadodara</span>
+						<span class= "spanname" id="kanp">Kanpur</span><span class= "spanname" id="sura">Surat</span>
+						<span class= "spanname" id="itar">Itarsi</span></p>		
+					
+				</div>			
+				<div id="metrics">
+					<p class="cont res">					
+						<a href="./LetsAnalyzeNow_IndianRailways.zip" download>Download Resources</a>			
+					</p>
+				</div>			
+			</div>
+		</div>
+	</div>
+
+
+	<script defer type="module">	
+		import * as p from './main.js';
+	</script>
+	
+</body>
