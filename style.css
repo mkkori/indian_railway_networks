@@ -56,7 +56,6 @@ p{
 span{
 	padding: 2px 5px;
 	border-radius: 4px;
-	cursor: pointer;
 	font-size: 13px;
 	margin-right: 5px;
 	color: black;
@@ -168,6 +167,13 @@ svg{
 .inner{
 	flex:1;
 	display: block;
+}
+
+.spanname,.spanstat{
+	cursor: pointer;
+	border-radius: 0;
+	background-color: lightpink;
+	
 }
 
 @media only screen and (max-width: 1000px) {

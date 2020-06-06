@@ -112,7 +112,7 @@ export var q =d3.json("./india.json").then(world => {
 
 
         function stationclick(sel,d){
-            d3.selectAll('.spanname').style("background-color","white");
+            d3.selectAll('.spanname').style("background-color","lightpink");
             d3.selectAll('.stations')
                 .attr('stroke','none')
                 .attr('r',function(d){return radscale(d.Trains)})
@@ -173,7 +173,7 @@ export var q =d3.json("./india.json").then(world => {
         }
         
         function colorElements(d){
-            d3.selectAll('.spanstat').style("background-color","white");
+            d3.selectAll('.spanstat').style("background-color","lightpink");
             d3.select(d).style("background-color","#fcf876");
         }
 
